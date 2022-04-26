@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Boyu Blog</title>
+    <link>http://www.caiboyu.online/</link>
+    <description>Recent content on Boyu Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 26 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="http://www.caiboyu.online/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Welcome to CaiBoyu Blog</title>
+      <link>http://www.caiboyu.online/2012/04/26/hello-world/</link>
+      <pubDate>Tue, 26 Apr 2022 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.caiboyu.online/2012/04/26/hello-world/</guid>
+      <description>“Yeah It&amp;rsquo;s on. ” “Hello” Hello World!</description>
+    </item>
+    
+    <item>
+      <title>Python Script Study</title>
+      <link>http://www.caiboyu.online/2022/04/18/istio-canary-release/</link>
+      <pubDate>Mon, 18 Apr 2022 15:00:00 +0000</pubDate>
+      
+      <guid>http://www.caiboyu.online/2022/04/18/istio-canary-release/</guid>
+      <description>Python Script 核心语法 注释 #!/usr/bin/python3 # 第一个注释 &amp;#39;&amp;#39;&amp;#39; 注释 &amp;#39;&amp;#39;&amp;#39; print(&amp;#34;Hello,Python!&amp;#34;) 复杂项目 长期维护 输入输出 python实现 str = input(&amp;#34;please input:&amp;#34;) print() bash实现 echo &amp;#34;please input&amp;#34; read str if逻辑 if command: x elif command2: y else: 文件读</description>
+    </item>
+    
+    <item>
+      <title>Shell Script Study</title>
+      <link>http://www.caiboyu.online/2022/04/18/istio-canary-release/</link>
+      <pubDate>Mon, 18 Apr 2022 15:00:00 +0000</pubDate>
+      
+      <guid>http://www.caiboyu.online/2022/04/18/istio-canary-release/</guid>
+      <description>Shell Shell 简介 Linux 系统界面，而不涉及到Linux内核 shell 脚本 = shell命令+ shell特性 + 流程控制 流程 用户输入命令 解释命令 在内核中执行然后返回结果</description>
+    </item>
+    
+    <item>
+      <title>Clean White Theme for Hugo</title>
+      <link>http://www.caiboyu.online/post/readme/</link>
+      <pubDate>Wed, 09 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.caiboyu.online/post/readme/</guid>
+      <description>Clean White Theme for Hugo CleanWhite is a clean, elegant, but fully functional blog theme for Hugo. Here is a live demo site using this theme. It is based on huxblog Jekyll Theme and Clean Blog Jekyll Theme. These two upstream projects have done awesome jobs to create a blog theme, what I&amp;rsquo;m doing here is porting it to Hugo, of which I like the simplicity and the much faster</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://www.caiboyu.online/top/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.caiboyu.online/top/about/</guid>
+      <description>Boyu Cai is a Dalian Maritime University sophomore. He is interested in the software development and he is studying Java hard and hopes to find relevant internships.
+He is happy with his current study, but also willing to take new challenges if the opportunity matches his interest.
+While he is not studying, he enjoys watching movies, swimming, hiking, travelling, writing blogs and learning languages.
+Feel free to connect Boyu via Github https://github.</description>
+    </item>
+    
+    <item>
+      <title>Posts Archive</title>
+      <link>http://www.caiboyu.online/top/archive/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.caiboyu.online/top/archive/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
