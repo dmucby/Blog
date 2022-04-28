@@ -6,22 +6,31 @@
     <description>Recent content in Tech on Boyu Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 18 Apr 2022 15:00:00 +0000</lastBuildDate><atom:link href="http://www.caiboyu.online/categories/tech/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 28 Apr 2022 12:58:00 +0000</lastBuildDate><atom:link href="http://www.caiboyu.online/categories/tech/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Iterator Design</title>
+      <link>http://www.caiboyu.online/2022/04/28/java-Design-pattern-Iterator/</link>
+      <pubDate>Thu, 28 Apr 2022 12:58:00 +0000</pubDate>
+      
+      <guid>http://www.caiboyu.online/2022/04/28/java-Design-pattern-Iterator/</guid>
+      <description>迭代器模式 核心思想 提供外部访问接口，而不暴露内部对象 可扩展的遍历方式 可遍历不同种类的对象 类图设计 Aggregate：聚集的抽象类 Concre</description>
+    </item>
+    
     <item>
       <title>Python Script Study</title>
-      <link>http://www.caiboyu.online/2022/04/18/istio-canary-release/</link>
+      <link>http://www.caiboyu.online/2022/04/18/script/python/</link>
       <pubDate>Mon, 18 Apr 2022 15:00:00 +0000</pubDate>
       
-      <guid>http://www.caiboyu.online/2022/04/18/istio-canary-release/</guid>
+      <guid>http://www.caiboyu.online/2022/04/18/script/python/</guid>
       <description>Python Script 核心语法 注释 #!/usr/bin/python3 # 第一个注释 &amp;#39;&amp;#39;&amp;#39; 注释 &amp;#39;&amp;#39;&amp;#39; print(&amp;#34;Hello,Python!&amp;#34;) 复杂项目 长期维护 输入输出 python实现 str = input(&amp;#34;please input:&amp;#34;) print() bash实现 echo &amp;#34;please input&amp;#34; read str if逻辑 if command: x elif command2: y else: 文件读</description>
     </item>
     
     <item>
       <title>Shell Script Study</title>
-      <link>http://www.caiboyu.online/2022/04/18/istio-canary-release/</link>
+      <link>http://www.caiboyu.online/2022/04/18/script/shell/</link>
       <pubDate>Mon, 18 Apr 2022 15:00:00 +0000</pubDate>
       
-      <guid>http://www.caiboyu.online/2022/04/18/istio-canary-release/</guid>
+      <guid>http://www.caiboyu.online/2022/04/18/script/shell/</guid>
       <description>Shell Shell 简介 Linux 系统界面，而不涉及到Linux内核 shell 脚本 = shell命令+ shell特性 + 流程控制 流程 用户输入命令 解释命令 在内核中执行然后返回结果</description>
     </item>
     

@@ -3,30 +3,36 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>http://www.caiboyu.online/</loc>
-    <lastmod>2022-04-26T00:00:00+00:00</lastmod>
+    <lastmod>2022-04-28T12:58:00+00:00</lastmod>
+  </url><url>
+    <loc>http://www.caiboyu.online/categories/</loc>
+    <lastmod>2022-04-28T12:58:00+00:00</lastmod>
+  </url><url>
+    <loc>http://www.caiboyu.online/2022/04/28/java-Design-pattern-Iterator/</loc>
+    <lastmod>2022-04-28T12:58:00+00:00</lastmod>
+  </url><url>
+    <loc>http://www.caiboyu.online/tags/java/</loc>
+    <lastmod>2022-04-28T12:58:00+00:00</lastmod>
   </url><url>
     <loc>http://www.caiboyu.online/post/</loc>
-    <lastmod>2022-04-26T00:00:00+00:00</lastmod>
+    <lastmod>2022-04-28T12:58:00+00:00</lastmod>
+  </url><url>
+    <loc>http://www.caiboyu.online/tags/</loc>
+    <lastmod>2022-04-28T12:58:00+00:00</lastmod>
+  </url><url>
+    <loc>http://www.caiboyu.online/categories/tech/</loc>
+    <lastmod>2022-04-28T12:58:00+00:00</lastmod>
   </url><url>
     <loc>http://www.caiboyu.online/2012/04/26/hello-world/</loc>
     <lastmod>2022-04-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://www.caiboyu.online/categories/</loc>
-    <lastmod>2022-04-18T15:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://www.caiboyu.online/2022/04/18/istio-canary-release/</loc>
+    <loc>http://www.caiboyu.online/2022/04/18/script/python/</loc>
     <lastmod>2022-04-18T15:00:00+00:00</lastmod>
   </url><url>
     <loc>http://www.caiboyu.online/tags/scripts/</loc>
     <lastmod>2022-04-18T15:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://www.caiboyu.online/2022/04/18/istio-canary-release/</loc>
-    <lastmod>2022-04-18T15:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://www.caiboyu.online/tags/</loc>
-    <lastmod>2022-04-18T15:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://www.caiboyu.online/categories/tech/</loc>
+    <loc>http://www.caiboyu.online/2022/04/18/script/shell/</loc>
     <lastmod>2022-04-18T15:00:00+00:00</lastmod>
   </url><url>
     <loc>http://www.caiboyu.online/post/readme/</loc>

@@ -1,15 +1,15 @@
 ---
 title:      "Python Script Study"
-subtitle:   "Basic learning of shell script"
+subtitle:   "Basic learning of python script"
 description: "Python 核心语法脚本"
 excerpt: ""
 date:       2022-04-18 15:00:00
 author:     "蔡博宇"
-image: "/img/istio-canary-release/canary_bg.jpg"
+image: "/img/programming/script/post-bg-unix-linux.jpg"
 published: true
 tags:
     - Scripts
-URL: "/2022/04/18/istio-canary-release/"
+URL: "/2022/04/18/script/python"
 categories: [ "Tech" ]
 ---
 

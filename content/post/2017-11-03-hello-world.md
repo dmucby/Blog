@@ -10,6 +10,5 @@ image:      "https://img.zhaohuabing.com/post-bg-2015.jpg"
 
 > “Yeah It's on. ”
 >
-> “Hello”
 
 ## Hello World!
