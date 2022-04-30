@@ -3,24 +3,33 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>http://www.caiboyu.online/</loc>
-    <lastmod>2022-04-28T12:58:00+00:00</lastmod>
+    <lastmod>2022-04-30T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://www.caiboyu.online/categories/</loc>
-    <lastmod>2022-04-28T12:58:00+00:00</lastmod>
+    <lastmod>2022-04-30T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://www.caiboyu.online/tags/ddos/</loc>
+    <lastmod>2022-04-30T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://www.caiboyu.online/tags/p4/</loc>
+    <lastmod>2022-04-30T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://www.caiboyu.online/2022/04/18/P4/SYN&#43;ECMP/</loc>
+    <lastmod>2022-04-30T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://www.caiboyu.online/post/</loc>
+    <lastmod>2022-04-30T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://www.caiboyu.online/tags/</loc>
+    <lastmod>2022-04-30T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://www.caiboyu.online/categories/tech/</loc>
+    <lastmod>2022-04-30T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://www.caiboyu.online/2022/04/28/java-Design-pattern-Iterator/</loc>
     <lastmod>2022-04-28T12:58:00+00:00</lastmod>
   </url><url>
     <loc>http://www.caiboyu.online/tags/java/</loc>
-    <lastmod>2022-04-28T12:58:00+00:00</lastmod>
-  </url><url>
-    <loc>http://www.caiboyu.online/post/</loc>
-    <lastmod>2022-04-28T12:58:00+00:00</lastmod>
-  </url><url>
-    <loc>http://www.caiboyu.online/tags/</loc>
-    <lastmod>2022-04-28T12:58:00+00:00</lastmod>
-  </url><url>
-    <loc>http://www.caiboyu.online/categories/tech/</loc>
     <lastmod>2022-04-28T12:58:00+00:00</lastmod>
   </url><url>
     <loc>http://www.caiboyu.online/2012/04/26/hello-world/</loc>
@@ -39,6 +48,8 @@
     <lastmod>2019-01-09T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://www.caiboyu.online/top/about/</loc>
+  </url><url>
+    <loc>http://www.caiboyu.online/top/books/catalogue/</loc>
   </url><url>
     <loc>http://www.caiboyu.online/top/archive/</loc>
   </url><url>

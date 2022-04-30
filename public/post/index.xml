@@ -6,7 +6,16 @@
     <description>Recent content in Posts on Boyu Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 28 Apr 2022 12:58:00 +0000</lastBuildDate><atom:link href="http://www.caiboyu.online/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 30 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="http://www.caiboyu.online/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>P4 DDoS Defense</title>
+      <link>http://www.caiboyu.online/2022/04/18/P4/SYN&#43;ECMP/</link>
+      <pubDate>Sat, 30 Apr 2022 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.caiboyu.online/2022/04/18/P4/SYN&#43;ECMP/</guid>
+      <description>SYN+ ECMP Idea ECMP: 根据数据包传输路径和地址来计算哈希值，并对哈希值进行求模运算，将值与端口进行映射，来达到随机情况下的链路数据包的负载均衡。 SYN Defense 基于P</description>
+    </item>
+    
     <item>
       <title>Iterator Design</title>
       <link>http://www.caiboyu.online/2022/04/28/java-Design-pattern-Iterator/</link>

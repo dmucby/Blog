@@ -15,15 +15,15 @@
     
 
     
-    <meta name="title" content="" />
-    <meta property="og:title" content="" />
-    <meta property="twitter:title" content="" />
+    <meta name="title" content="P4 DDoS Defense" />
+    <meta property="og:title" content="P4 DDoS Defense" />
+    <meta property="twitter:title" content="P4 DDoS Defense" />
     
 
     
-    <meta name="description" content="蔡博宇，程序员, 开源爱好者，生活探险家 | 这里是 蔡博宇 的博客，与你一起发现更大的世界。">
-    <meta property="og:description" content="蔡博宇，程序员, 开源爱好者，生活探险家 | 这里是 蔡博宇 的博客，与你一起发现更大的世界。" />
-    <meta property="twitter:description" content="蔡博宇，程序员, 开源爱好者，生活探险家 | 这里是 蔡博宇 的博客，与你一起发现更大的世界。" />
+    <meta name="description" content="基于P4的DDoS跳变流量清洗数据">
+    <meta property="og:description" content="基于P4的DDoS跳变流量清洗数据" />
+    <meta property="twitter:description" content="基于P4的DDoS跳变流量清洗数据" />
     
 
     
@@ -34,9 +34,9 @@
     <meta name="keyword"  content="蔡博宇, caiboyu, Caiboyu, , 蔡博宇的网络日志, 赵化冰的博客, Caiboyu Blog, 博客, 个人网站, 互联网, Web, 云原生, PaaS, Istio, Kubernetes, 微服务, Microservice">
     <link rel="shortcut icon" href="/img/favicon.ico">
 
-    <title>Tags-蔡博宇的博客 | Caiboyu Blog</title>
+    <title>P4 DDoS Defense-蔡博宇的博客 | Caiboyu Blog</title>
 
-    <link rel="canonical" href="/tags/">
+    <link rel="canonical" href="/2022/04/18/P4/SYN&#43;ECMP/">
 
     
     
@@ -153,14 +153,45 @@
 
 
 
-<header class="intro-header" style="background-image: url('/img/home-bg-jeep.jpg')">
+
+<style type="text/css">
+    header.intro-header {
+        background-image: url('/img/programming/script/post-bg-unix-linux.jpg')
+    }
+</style>
+
+<header class="intro-header" >
+
     <div class="container">
         <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 ">
-                <div class="site-heading">
-                    <h1>Boyu Blog </h1>
-                    
-		    <span class="subheading">路在脚下，心向远方</span>
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <div class="tags">
+                        
+                        <a class="tag" href="/tags/ddos" title="DDoS">
+                            DDoS
+                        </a>
+                        
+                        <a class="tag" href="/tags/p4" title="P4">
+                            P4
+                        </a>
+                        
+                    </div>
+                    <h1>P4 DDoS Defense</h1>
+                    <h2 class="subheading">SYN-Flood Defense based P4</h2>
+                    <span class="meta">
+                        
+                            Posted by 
+                            
+                                     &#34;蔡博宇&#34;
+                             
+                            on 
+                            Saturday, April 30, 2022
+                            
+                            
+                            
+                            
+                    </span>
                 </div>
             </div>
         </div>
@@ -173,13 +204,95 @@
 <article>
     <div class="container">
         <div class="row">
+
             
             <div class="
                 col-lg-8 col-lg-offset-2
                 col-md-10 col-md-offset-1
                 post-container">
 
-         	
+                
+                <h1 id="syn-ecmp">SYN+ ECMP</h1>
+<h2 id="idea">Idea</h2>
+<h3 id="ecmp">ECMP:</h3>
+<p>根据数据包传输路径和地址来计算哈希值，并对哈希值进行求模运算，将值与端口进行映射，来达到随机情况下的链路数据包的负载均衡。</p>
+<h3 id="syn-defense">SYN Defense</h3>
+<p>基于P4的寄存器来对SYN进行计数，防御策略请阅读<a href="https://github.com/dmucby/P4-Defense/tree/master/SYN%20%E9%98%B2%E6%B4%AA">SYN DEFENSE</a>，在此处我们进行对防御流表周期性的替换，让攻击者难以获取防御节点和防御策略，通过<code>P4-Utils</code>控制器来对交换机的流表进行随即替换。</p>
+<h2 id="topology">Topology</h2>
+<p>
+  <img src="https://personal-drawing-bed.oss-cn-beijing.aliyuncs.com/img/multi_hop_topo.png" alt="multi_hop_topo">
+
+</p>
+<ul>
+<li><code>s1</code> <code>s6</code> 交换机负责安装负载均衡计算流表</li>
+<li><code>s2 </code> <code>s3</code> <code>s4</code> <code>s5</code> 负责进行数据包的清洗</li>
+</ul>
+<h2 id="p4-switch">P4 Switch</h2>
+<h3 id="ecmp-implementation">ECMP Implementation</h3>
+<p>使用<a href="https://github.com/p4lang/p4c/blob/main/p4include/v1model.p4">v1mode</a>内置哈希函数进行哈希值的计算，通过对<code>ipv4.srcAddr</code>、<code>ipv4.dstAddr</code>、<code>tcp.srcPort</code> <code>tcp.dstPort</code> 、<code>ipv4.protocol</code>进行哈希计算，通过设置最大值<code>4</code>，将结果控制在0~3之间。然后在流表中建立端口与哈希值的单值映射。</p>
+<h4 id="p4-code">P4 Code:</h4>
+<pre tabindex="0"><code class="language-p4" data-lang="p4">hash(meta.ecmp_hash,
+	    HashAlgorithm.crc16,
+	    (bit&lt;1&gt;)0,
+	    {
+          hdr.ipv4.srcAddr,
+	      hdr.ipv4.dstAddr,
+          hdr.tcp.srcPort,
+          hdr.tcp.dstPort,
+          hdr.ipv4.protocol
+        },
+	      num_nhops);
+</code></pre><p><strong>详细参数如下：</strong></p>
+<pre tabindex="0"><code class="language-p4" data-lang="p4">@pure
+extern void hash&lt;O, T, D, M&gt;(out O result, in HashAlgorithm algo, in T base, in D data, in M max);
+</code></pre><h4 id="table-rule">Table rule</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-txt" data-lang="txt"><span style="display:flex;"><span>table_add ecmp_group_to_nhop set_nhop 1 0 =&gt;  00:00:00:02:01:00 2
+</span></span><span style="display:flex;"><span>table_add ecmp_group_to_nhop set_nhop 1 1 =&gt;  00:00:00:03:01:00 3
+</span></span><span style="display:flex;"><span>table_add ecmp_group_to_nhop set_nhop 1 2 =&gt;  00:00:00:04:01:00 4
+</span></span><span style="display:flex;"><span>table_add ecmp_group_to_nhop set_nhop 1 3 =&gt;  00:00:00:05:01:00 5
+</span></span></code></pre></div><p>在流表中，我们将哈希值<code>0</code>与<code>2</code>号端口映射，其余值类推可得。</p>
+<h3 id="syn-defense-1">SYN-Defense</h3>
+<p>核心代码与<a href="https://github.com/dmucby/P4-Defense/tree/master/SYN%20%E9%98%B2%E6%B4%AA">SYN DEFENSE</a>类似，在此不再赘述。</p>
+<p>详细代码参照https://github.com/dmucby/P4-Defense/tree/master/SYN%2BECMP</p>
+<h2 id="controller">Controller</h2>
+<p>借用<code>P4-Utils</code>天生对<code>P4</code>交换机的支持，我们进行如下设定，在一段周期内，控制器将随机对<code>s2 </code> <code>s3</code> <code>s4</code> <code>s5</code> 交换机进行随机选择两个交换机部署防御流表规则，在进行下一周期时，交换机需要重置，因此我们需要补充转发流表规则。</p>
+<h3 id="defense-deployment">Defense deployment</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>nums <span style="color:#ff79c6">=</span> [<span style="color:#bd93f9">0</span>,<span style="color:#bd93f9">0</span>,<span style="color:#bd93f9">0</span>,<span style="color:#bd93f9">0</span>,<span style="color:#bd93f9">0</span>,<span style="color:#bd93f9">0</span>]
+</span></span><span style="display:flex;"><span>table1 <span style="color:#ff79c6">=</span> random<span style="color:#ff79c6">.</span>randint(<span style="color:#bd93f9">1</span>,<span style="color:#bd93f9">4</span>)
+</span></span><span style="display:flex;"><span>table2 <span style="color:#ff79c6">=</span> random<span style="color:#ff79c6">.</span>randint(<span style="color:#bd93f9">1</span>,<span style="color:#bd93f9">4</span>)
+</span></span><span style="display:flex;"><span>nums[table1] <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">1</span>
+</span></span><span style="display:flex;"><span>nums[table2] <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">1</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">for</span> i <span style="color:#ff79c6">in</span> <span style="color:#8be9fd;font-style:italic">range</span>(<span style="color:#bd93f9">6</span>):
+</span></span><span style="display:flex;"><span>   <span style="color:#ff79c6">if</span>(nums[i] <span style="color:#ff79c6">==</span> <span style="color:#bd93f9">1</span>):
+</span></span><span style="display:flex;"><span>      sw <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;s&#34;</span> <span style="color:#ff79c6">+</span> <span style="color:#8be9fd;font-style:italic">str</span>(i)
+</span></span><span style="display:flex;"><span>      self<span style="color:#ff79c6">.</span>controller[sw]<span style="color:#ff79c6">.</span>table_add(<span style="color:#f1fa8c">&#34;syn_counters&#34;</span>, <span style="color:#f1fa8c">&#34;syn_defence_action&#34;</span>, [<span style="color:#f1fa8c">&#34;1&#34;</span>])
+</span></span></code></pre></div><h2 id="experimental">Experimental</h2>
+<p>我们使用同样的攻击工具<code>hping3</code>，让<code>h1</code>对<code>h2</code>发动<code>SYN-Flood</code>的<code>DDoS</code>攻击，通过监控数据包的流量来查看防御效果，由于个人电脑内存限制，我们只进行<strong>百万数据包</strong>级别的攻击测试。</p>
+<p>在<code>h1</code>终端使用如下攻击命令：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>hping3 -q -n -S -p <span style="color:#bd93f9">5001</span> --faster 10.0.6.2 
+</span></span></code></pre></div><h3 id="result">Result</h3>
+<p>
+  <img src="https://personal-drawing-bed.oss-cn-beijing.aliyuncs.com/img/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20220429180843.png" alt="微信截图_20220429180843">
+
+</p>
+<p>通过实验结果可看出，<code>h1</code>向<code>s1-eth1</code>端口发出攻击数据包，然后<code>s2</code> <code>s3</code> <code>s4</code> <code>s4</code> 均衡收集到数据包，并从出口<code>eth2</code>看出数据包进行清洗，<code>s6</code>从<code>eth2</code>端口收到了少量的攻击包。</p>
+<h2 id="experimental-summary">Experimental summary</h2>
+<p>由于策略的设定，主机可能会收到少部分攻击流数据包，但由于只部署部分防御流表规则，大大减少了防御开销，对于这样的结果，也可以接受。但本实验存在一定漏洞，需要在后续工作中进行改正。</p>
+
+
+                
+
+                <hr>
+                <ul class="pager">
+                    
+                    <li class="previous">
+                        <a href="/2022/04/28/java-Design-pattern-Iterator/" data-toggle="tooltip" data-placement="top" title="Iterator Design">&larr;
+                            Previous Post</a>
+                    </li>
+                    
+                    
+                </ul>
                 
 <script src="https://giscus.app/client.js"
         data-repo="https://github.com/dmucby/Blog.git"
@@ -196,8 +309,25 @@
 </script>
 
 
-
             </div>
+
+            
+            
+            <div class="
+                col-lg-2 col-lg-offset-0
+                visible-lg-block
+                sidebar-container
+                catalog-container">
+                <div class="side-catalog">
+                    <hr class="hidden-sm hidden-xs">
+                    <h5>
+                        <a class="catalog-toggle" href="#">CATALOG</a>
+                    </h5>
+                    <ul class="catalog-body"></ul>
+                </div>
+            </div>
+            
+
             
             <div class="
                 col-lg-8 col-lg-offset-2
@@ -315,7 +445,7 @@
             
            
                    <li>
-                       <a href='/tags/index.xml' rel="alternate" type="application/rss+xml" title="Boyu Blog" >
+                       <a href='' rel="alternate" type="application/rss+xml" title="Boyu Blog" >
                            <span class="fa-stack fa-lg">
                                <i class="fas fa-circle fa-stack-2x"></i>
                                <i class="fas fa-rss fa-stack-1x fa-inverse"></i>
