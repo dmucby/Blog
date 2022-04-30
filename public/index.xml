@@ -53,6 +53,15 @@
     </item>
     
     <item>
+      <title>Improve the access speed of campus network</title>
+      <link>http://www.caiboyu.online/2022/04/18/Toy/campus-network/</link>
+      <pubDate>Mon, 18 Apr 2022 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.caiboyu.online/2022/04/18/Toy/campus-network/</guid>
+      <description>提升校园网络访问速度 一、原理 请求服务器资源过程： 为了得到目标服务器的ip地址 访问本机的hosts文件 访问局域网内提供域名解析的DNS服务器 再</description>
+    </item>
+    
+    <item>
       <title>Clean White Theme for Hugo</title>
       <link>http://www.caiboyu.online/post/readme/</link>
       <pubDate>Wed, 09 Jan 2019 00:00:00 +0000</pubDate>

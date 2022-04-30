@@ -6,7 +6,9 @@ date:        2022-04-30
 author:      "蔡博宇"
 image:       "/img/programming/script/post-bg-unix-linux.jpg"
 published: true
-tags:        ["DDoS", "P4"]
+tags:
+    - P4
+    - DDoS
 URL: "/2022/04/18/P4/SYN+ECMP"
 categories:  ["Tech" ]
 ---

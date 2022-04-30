@@ -15,15 +15,15 @@
     
 
     
-    <meta name="title" content="" />
-    <meta property="og:title" content="" />
-    <meta property="twitter:title" content="" />
+    <meta name="title" content="Improve the access speed of campus network" />
+    <meta property="og:title" content="Improve the access speed of campus network" />
+    <meta property="twitter:title" content="Improve the access speed of campus network" />
     
 
     
-    <meta name="description" content="蔡博宇，程序员, 开源爱好者，生活探险家 | 这里是 蔡博宇 的博客，与你一起发现更大的世界。">
-    <meta property="og:description" content="蔡博宇，程序员, 开源爱好者，生活探险家 | 这里是 蔡博宇 的博客，与你一起发现更大的世界。" />
-    <meta property="twitter:description" content="蔡博宇，程序员, 开源爱好者，生活探险家 | 这里是 蔡博宇 的博客，与你一起发现更大的世界。" />
+    <meta name="description" content="通过修改host文件来提升校园网访问速度">
+    <meta property="og:description" content="通过修改host文件来提升校园网访问速度" />
+    <meta property="twitter:description" content="通过修改host文件来提升校园网访问速度" />
     
 
     
@@ -34,9 +34,9 @@
     <meta name="keyword"  content="蔡博宇, caiboyu, Caiboyu, Caiboyu Blog, 博客, 个人网站, 互联网, Web, 云原生, PaaS, Istio, Kubernetes, 微服务, Microservice">
     <link rel="shortcut icon" href="/img/favicon.ico">
 
-    <title>Tops-蔡博宇的博客 | Caiboyu Blog</title>
+    <title>Improve the access speed of campus network-蔡博宇的博客 | Caiboyu Blog</title>
 
-    <link rel="canonical" href="/top/">
+    <link rel="canonical" href="/2022/04/18/Toy/campus-network/">
 
     
     
@@ -155,14 +155,179 @@
 
 
 
-<header class="intro-header" style="background-image: url('/img/home-bg-jeep.jpg')">
+
+<style type="text/css">
+    header.intro-header {
+        background-image: url('/img/post-bg-coffee.jpeg')
+    }
+</style>
+
+<header class="intro-header" >
+
     <div class="container">
         <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 ">
-                <div class="site-heading">
-                    <h1>Boyu Blog </h1>
-                    
-		    <span class="subheading">路在脚下，心向远方</span>
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <div class="tags">
+                        
+                        <a class="tag" href="/tags/network" title="Network">
+                            Network
+                        </a>
+                        
+                        <a class="tag" href="/tags/campus" title="Campus">
+                            Campus
+                        </a>
+                        
+                    </div>
+                    <h1>Improve the access speed of campus network</h1>
+                    <h2 class="subheading">campus network</h2>
+                    <span class="meta">
+                        
+                            Posted by 
+                            
+                                     &#34;蔡博宇&#34;
+                             
+                            on 
+                            Monday, April 18, 2022
+                            
+                                <span id="/2022/04/18/Toy/campus-network/" class="leancloud_visitors meta_data_item" data-flag-title="">
+    <span class="post-meta-item-icon">
+      <span class="octicon octicon-eye"></span> 
+    </span>
+    <i class="fa fa-eye"></i>
+    <span class="old-visitors-count" style="display: none;"></span>
+    <span class="leancloud-visitors-count"></span>
+</span>
+
+
+
+<script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+
+<script>
+	AV.initialize("", "");
+</script>
+
+<script type="text/javascript">
+function showTime(Counter) {
+    var query = new AV.Query(Counter);
+    var entries = [];
+    var $visitors = $(".leancloud_visitors");
+
+    $visitors.each(function() {
+        entries.push($(this).attr("id").trim());
+    });
+
+    query.containedIn('url', entries);
+    query.find()
+        .done(function(results) {
+            var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+            var OLD_COUNT_CONTAINER_REF = '.old-visitors-count';
+
+            
+            
+            
+            
+
+            for (var i = 0; i < results.length; i++) {
+                var item = results[i];
+                var url = item.get('url');
+                var time = item.get('time');
+                var element = document.getElementById(url);
+
+                $(element).find(COUNT_CONTAINER_REF).text(time);
+            }
+            for (var i = 0; i < entries.length; i++) {
+                var url = entries[i];
+                var element = document.getElementById(url);
+                var countSpan = $(element).find(COUNT_CONTAINER_REF);
+                if (countSpan.text() == '') {
+                    var oldCountSpan = $(element).find(OLD_COUNT_CONTAINER_REF).text();
+                    if(oldCountSpan!=''){
+                        countSpan.text(0+parseInt(oldCountSpan));
+                    }else{
+                        countSpan.text(0);          
+                    }
+                }
+            }
+        })
+        .fail(function(object, error) {
+            console.log("Error: " + error.code + " " + error.message);
+        });
+}
+
+function addCount(Counter) {
+    var $visitors = $(".leancloud_visitors");
+    var url = $visitors.attr('id').trim();
+    var title = $visitors.attr('data-flag-title').trim();
+    var query = new AV.Query(Counter);
+
+    query.equalTo("url", url);
+    query.find({
+        success: function(results) {
+            if (results.length > 0) {
+                var counter = results[0];
+                counter.fetchWhenSave(true);
+                counter.increment("time");
+                counter.save(null, {
+                    success: function(counter) {
+                        var $element = $(document.getElementById(url));
+                        $element.find('.leancloud-visitors-count').text(counter.get('time'));
+                    },
+                    error: function(counter, error) {
+                        console.log('Failed to save Visitor num, with error message: ' + error.message);
+                    }
+                });
+            } else {
+                var newcounter = new Counter();
+                 
+                var acl = new AV.ACL();
+                acl.setPublicReadAccess(true);
+                acl.setPublicWriteAccess(true);
+                newcounter.setACL(acl);
+                 
+                newcounter.set("title", title);
+                newcounter.set("url", url);
+                var OLD_COUNT_CONTAINER_REF = '.old-visitors-count';
+                var $element = $(document.getElementById(url));
+                var oldCountSpan = $element.find(OLD_COUNT_CONTAINER_REF).text();
+                if(oldCountSpan!=''){
+                    newcounter.set("time", parseInt(oldCountSpan)+1);
+                }else{
+ 	                    newcounter.set("time",  1);
+                }
+                newcounter.save(null, {
+                    success: function(newcounter) {
+                        var $element = $(document.getElementById(url));
+                        $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+                    },
+                    error: function(newcounter, error) {
+                        console.log('Failed to create');
+                    }
+                });
+            }
+        },
+        error: function(error) {
+            console.log('Error:' + error.code + " " + error.message);
+        }
+    });
+}
+$(function() {
+    var Counter = AV.Object.extend("Counter");
+    
+    
+    if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+    } else {
+        showTime(Counter);
+    }
+});
+</script>
+
+                            
+                            
+                            
+                            
+                    </span>
                 </div>
             </div>
         </div>
@@ -175,13 +340,82 @@
 <article>
     <div class="container">
         <div class="row">
+
             
             <div class="
                 col-lg-8 col-lg-offset-2
                 col-md-10 col-md-offset-1
                 post-container">
 
-         	
+                
+                <h1 id="提升校园网络访问速度">提升校园网络访问速度</h1>
+<h2 id="一原理">一、原理</h2>
+<h3 id="请求服务器资源过程">请求服务器资源过程：</h3>
+<blockquote>
+<p>为了得到目标服务器的<code>ip</code>地址</p>
+</blockquote>
+<ol>
+<li>访问本机的hosts文件</li>
+<li>访问局域网内提供域名解析的<code>DNS</code>服务器</li>
+</ol>
+<p>再得到服务器<code>ip</code>地址后，浏览器即可访问目标服务器</p>
+<h4 id="改进空间">改进空间：</h4>
+<ul>
+<li>一般hosts文件中并无域名</li>
+<li>将教务选课系统域名和ip地址写入hosts文件可以提升访问速度</li>
+</ul>
+<h2 id="获取教务系统域名">获取教务系统域名</h2>
+<h3 id="教务系统">教务系统：</h3>
+<p><a href="jw.xpaas.dlmu.edu.cn">教务系统</a></p>
+<p>
+  <img src="https://personal-drawing-bed.oss-cn-beijing.aliyuncs.com/img/image-20220405114809288.png" alt="image-20220405114809288">
+
+</p>
+<p><strong>ping 获取域名</strong></p>
+<p>
+  <img src="https://personal-drawing-bed.oss-cn-beijing.aliyuncs.com/img/image-20220405114924634.png" alt="image-20220405114924634">
+
+</p>
+<h4 id="学校网址">学校网址：</h4>
+<p>
+  <img src="https://personal-drawing-bed.oss-cn-beijing.aliyuncs.com/img/image-20220405115726670.png" alt="image-20220405115726670">
+
+</p>
+<ul>
+<li><a href="https://hall.dlmu.edu.cn/">官网</a></li>
+<li><code>ip</code>地址：202.118.86.24</li>
+</ul>
+<h2 id="写入hosts文件">写入hosts文件</h2>
+<p><code>windows10</code>文件系统下:hosts文件路径</p>
+<pre tabindex="0"><code>C:\Windows\System32\drivers\etc
+</code></pre><p><strong>注意备份！ 备份！ 备份！</strong></p>
+<p>
+  <img src="https://personal-drawing-bed.oss-cn-beijing.aliyuncs.com/img/image-20220405121100093.png" alt="image-20220405121100093">
+
+</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#6272a4"># DLMU 网站</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>202.118.86.130  jw.xpaas.dlmu.edu.cn
+</span></span><span style="display:flex;"><span>202.118.86.24    hall.dlmu.edu.cn
+</span></span></code></pre></div>
+
+                
+
+                <hr>
+                <ul class="pager">
+                    
+                    <li class="previous">
+                        <a href="/post/readme/" data-toggle="tooltip" data-placement="top" title="Clean White Theme for Hugo">&larr;
+                            Previous Post</a>
+                    </li>
+                    
+                    
+                    <li class="next">
+                        <a href="/2022/04/18/script/shell/" data-toggle="tooltip" data-placement="top" title="Shell Script Study">Next
+                            Post &rarr;</a>
+                    </li>
+                    
+                </ul>
                 
 <script src="https://giscus.app/client.js"
         data-repo=""
@@ -198,8 +432,25 @@
 </script>
 
 
-
             </div>
+
+            
+            
+            <div class="
+                col-lg-2 col-lg-offset-0
+                visible-lg-block
+                sidebar-container
+                catalog-container">
+                <div class="side-catalog">
+                    <hr class="hidden-sm hidden-xs">
+                    <h5>
+                        <a class="catalog-toggle" href="#">CATALOG</a>
+                    </h5>
+                    <ul class="catalog-body"></ul>
+                </div>
+            </div>
+            
+
             
             <div class="
                 col-lg-8 col-lg-offset-2
@@ -216,37 +467,37 @@
                         
                         
                         <a href="/tags/campus" title="campus">
-                        campus
+                            campus
                         </a>
                         
                         
                         
                         <a href="/tags/ddos" title="ddos">
-                        ddos
+                            ddos
                         </a>
                         
                         
                         
                         <a href="/tags/java" title="java">
-                        java
+                            java
                         </a>
                         
                         
                         
                         <a href="/tags/network" title="network">
-                        network
+                            network
                         </a>
                         
                         
                         
                         <a href="/tags/p4" title="p4">
-                        p4
+                            p4
                         </a>
                         
                         
                         
                         <a href="/tags/scripts" title="scripts">
-                        scripts
+                            scripts
                         </a>
                         
                         
@@ -337,7 +588,7 @@
             
            
                    <li>
-                       <a href='/top/index.xml' rel="alternate" type="application/rss+xml" title="Boyu Blog" >
+                       <a href='' rel="alternate" type="application/rss+xml" title="Boyu Blog" >
                            <span class="fa-stack fa-lg">
                                <i class="fas fa-circle fa-stack-2x"></i>
                                <i class="fas fa-rss fa-stack-1x fa-inverse"></i>

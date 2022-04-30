@@ -17,7 +17,7 @@ home = ["HTML", "RSS", "Algolia"]
   header_image = "img/home-bg-jeep.jpg"
   SEOTitle = "蔡博宇的博客 | Caiboyu Blog"
   description = "蔡博宇，程序员, 开源爱好者，生活探险家 | 这里是 蔡博宇 的博客，与你一起发现更大的世界。"
-  keyword = "蔡博宇, caiboyu, Caiboyu, , 蔡博宇的网络日志, 赵化冰的博客, Caiboyu Blog, 博客, 个人网站, 互联网, Web, 云原生, PaaS, Istio, Kubernetes, 微服务, Microservice"
+  keyword = "蔡博宇, caiboyu, Caiboyu, Caiboyu Blog, 博客, 个人网站, 互联网, Web, 云原生, PaaS, Istio, Kubernetes, 微服务, Microservice"
   slogan = "路在脚下，心向远方"
 
   image_404 = "img/404-bg.jpg"
@@ -25,7 +25,7 @@ home = ["HTML", "RSS", "Algolia"]
   omit_categories = false
 
   # leancloud storage for page view counter
-  page_view_conter = false 
+  page_view_conter = true
   leancloud_app_id = ""
   leancloud_app_key = ""
 
@@ -38,10 +38,10 @@ home = ["HTML", "RSS", "Algolia"]
   # Sidebar settings
   sidebar_about_description = "Software Developer, Open Source Enthusiast and Life Adventurer"
   #sidebar_avatar = "img/avatar-zhaohuabing.jpg"      # use absolute URL, seeing it's used in both `/` and `/about/`
-  sidebar_avatar = "img/caiboyu1.jpg"      # use absolute URL, seeing it's used in both `/` and `/about/`
+  sidebar_avatar = "img/caiboyu2.png"      # use absolute URL, seeing it's used in both `/` and `/about/`
 
   featured_tags = true 
-  featured_condition_size = 2 
+  featured_condition_size = 0
 
   # Baidu Analytics
   ba_track_id = ""
@@ -55,7 +55,7 @@ home = ["HTML", "RSS", "Algolia"]
   # Follow https://twikoo.js.org/ to set up your own env_id
   twikoo_env_id = ""
 
-  friends = true
+  friends = false
   bookmarks = false
   about_me = true
 
@@ -73,7 +73,7 @@ home = ["HTML", "RSS", "Algolia"]
   stackoverflow  = "https://stackoverflow.com/users/17031721/dmu-cby"
   #instagram     = "full profile url in instagram"
   github         = "https://github.com/dmucby"
-  wechat         = "your wechat qr code image"
+  wechat         = "https://personal-drawing-bed.oss-cn-beijing.aliyuncs.com/img/wechat_qrcode%20.jpg"
   #medium        = "full profile url in medium"
   #slack         = "full workspace url in slack"
   #pinterest     = "full profile url in pinterest"
@@ -97,15 +97,16 @@ home = ["HTML", "RSS", "Algolia"]
   title = "unsplash"
   href = "https://unsplash.com"
   
-  [[params.addtional_menus]]
-  title =  "BOOKS"
-  href =  "/top/books/"
+ # [[params.addtional_menus]]
+ # title =  "BOOKS"
+ # href =  "/top/books/"
   [[params.addtional_menus]]
   title =  "ARCHIVE"
   href =  "/top/archive/"
   [[params.addtional_menus]]
   title =  "ABOUT"
   href =  "/top/about/"
+
 
 [outputFormats.Algolia]
 baseName = "algolia"
@@ -118,15 +119,16 @@ vars = ["title", "summary", "date", "publishdate", "expirydate", "permalink"]
 params = ["categories", "tags"] 
 
 [params.giscus]
-  data_repo="https://github.com/dmucby/Blog.git"
-  data_repo_id="Blog"
-  data_category="your category"
-  data_category_id="your category id"
-  data_mapping="pathname"
-  data_reactions_enabled="1"
-  data_emit_metadata="0"
-  data_theme="light"
-  data_lang="en"
+  data-repo="dmucby/Blog"
+  data-repo-id="R_kgDOHO64SQ"
+  data-category="General"
+  data-category-id="DIC_kwDOHO64Sc4CO3JZ"
+  data-mapping="pathname"
+  data-reactions-enabled="1"
+  data-emit-metadata="0"
+  data-input-position="bottom"
+  data-theme="light"
+  data-lang="zh-CN"
   crossorigin="anonymous"
 
 [markup]

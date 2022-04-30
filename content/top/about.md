@@ -1,4 +1,4 @@
-![Boyu Cai](https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/typroa/3046/2-16509605037721.jpg)
+![image-20220430124417984](https://personal-drawing-bed.oss-cn-beijing.aliyuncs.com/img/image-20220430124417984.png)
 
  **_Boyu Cai_** is a Dalian Maritime University sophomore. He is interested in the  software development and he is studying Java hard and hopes to find relevant internships.
 
