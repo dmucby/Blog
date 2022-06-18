@@ -3,7 +3,7 @@ title:      "Iterator Design"
 subtitle:   "Java Design-pattern Iterator implementation"
 excerpt: ""
 date:       2022-04-28 12:58:00
-author:     "蔡博宇"
+author:     "Boyu Cai"
 image: ""
 published: true
 tags:

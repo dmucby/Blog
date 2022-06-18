@@ -3,12 +3,11 @@ title:       "Improve the access speed of campus network"
 subtitle:    "campus network"
 description: "通过修改host文件来提升校园网访问速度"
 date:        2022-04-18
-author:      "蔡博宇"
+author:		 Boyu Cai
 image:       "/img/post-bg-coffee.jpeg"
 published: true
 tags:
     - Network
-    - Campus
 URL: "/2022/04/18/Toy/campus-network"
 categories:  ["Toy" ]
 ---

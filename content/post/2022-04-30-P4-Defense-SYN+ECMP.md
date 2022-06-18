@@ -3,12 +3,11 @@ title:       "P4 DDoS Defense"
 subtitle:    "SYN-Flood Defense based P4"
 description: "基于P4的DDoS跳变流量清洗数据"
 date:        2022-04-30
-author:      "蔡博宇"
+author:		 Boyu Cai
 image:       "/img/programming/script/post-bg-unix-linux.jpg"
 published: true
 tags:
     - P4
-    - DDoS
 URL: "/2022/04/18/P4/SYN+ECMP"
 categories:  ["Tech" ]
 ---

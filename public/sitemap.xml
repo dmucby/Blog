@@ -3,28 +3,40 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>http://www.caiboyu.online/</loc>
-    <lastmod>2022-06-16T00:00:00+00:00</lastmod>
+    <lastmod>2022-06-18T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://www.caiboyu.online/categories/</loc>
-    <lastmod>2022-06-16T00:00:00+00:00</lastmod>
+    <lastmod>2022-06-18T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://www.caiboyu.online/tags/nginx/</loc>
-    <lastmod>2022-06-16T00:00:00+00:00</lastmod>
+    <loc>http://www.caiboyu.online/2022/6/16/Math/Pleasing/HMM/</loc>
+    <lastmod>2022-06-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://www.caiboyu.online/tags/math/</loc>
+    <lastmod>2022-06-18T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://www.caiboyu.online/post/</loc>
+    <lastmod>2022-06-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://www.caiboyu.online/tags/</loc>
+    <lastmod>2022-06-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://www.caiboyu.online/categories/tech/</loc>
+    <lastmod>2022-06-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://www.caiboyu.online/tags/nginx/</loc>
     <lastmod>2022-06-16T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://www.caiboyu.online/2022/6/16/Nginx/RTMP/</loc>
     <lastmod>2022-06-16T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://www.caiboyu.online/tags/</loc>
-    <lastmod>2022-06-16T00:00:00+00:00</lastmod>
+    <loc>http://www.caiboyu.online/tags/philosophy/</loc>
+    <lastmod>2022-05-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://www.caiboyu.online/categories/tech/</loc>
-    <lastmod>2022-06-16T00:00:00+00:00</lastmod>
+    <loc>http://www.caiboyu.online/2022/5/20/Spech/RTMP/</loc>
+    <lastmod>2022-05-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://www.caiboyu.online/tags/ddos/</loc>
-    <lastmod>2022-04-30T00:00:00+00:00</lastmod>
+    <loc>http://www.caiboyu.online/categories/speech/</loc>
+    <lastmod>2022-05-20T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://www.caiboyu.online/tags/p4/</loc>
     <lastmod>2022-04-30T00:00:00+00:00</lastmod>
@@ -38,9 +50,6 @@
     <loc>http://www.caiboyu.online/tags/java/</loc>
     <lastmod>2022-04-28T12:58:00+00:00</lastmod>
   </url><url>
-    <loc>http://www.caiboyu.online/2012/04/26/hello-world/</loc>
-    <lastmod>2022-04-26T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>http://www.caiboyu.online/2022/04/18/script/python/</loc>
     <lastmod>2022-04-18T15:00:00+00:00</lastmod>
   </url><url>
@@ -50,9 +59,6 @@
     <loc>http://www.caiboyu.online/2022/04/18/script/shell/</loc>
     <lastmod>2022-04-18T15:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://www.caiboyu.online/tags/campus/</loc>
-    <lastmod>2022-04-18T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>http://www.caiboyu.online/2022/04/18/Toy/campus-network/</loc>
     <lastmod>2022-04-18T00:00:00+00:00</lastmod>
   </url><url>
@@ -61,6 +67,15 @@
   </url><url>
     <loc>http://www.caiboyu.online/categories/toy/</loc>
     <lastmod>2022-04-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://www.caiboyu.online/tags/inspired/</loc>
+    <lastmod>2022-04-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://www.caiboyu.online/categories/power/</loc>
+    <lastmod>2022-04-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://www.caiboyu.online/2022/04/06/Power/Self-Improvement/</loc>
+    <lastmod>2022-04-06T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://www.caiboyu.online/post/readme/</loc>
     <lastmod>2019-01-09T00:00:00+00:00</lastmod>

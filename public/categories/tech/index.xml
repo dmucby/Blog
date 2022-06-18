@@ -6,7 +6,16 @@
     <description>Recent content in Tech on Boyu Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 16 Jun 2022 00:00:00 +0000</lastBuildDate><atom:link href="http://www.caiboyu.online/categories/tech/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 18 Jun 2022 00:00:00 +0000</lastBuildDate><atom:link href="http://www.caiboyu.online/categories/tech/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hidden Markov Model</title>
+      <link>http://www.caiboyu.online/2022/6/16/Math/Pleasing/HMM/</link>
+      <pubDate>Sat, 18 Jun 2022 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.caiboyu.online/2022/6/16/Math/Pleasing/HMM/</guid>
+      <description>Hidden Markov Model 在哲学的意义上，这是人类认识的一个飞跃！ 马尔可夫模型是一个并不复杂，且在自然语言处理领域最为快捷有效的方法，它通过概率的计算解决了生活</description>
+    </item>
+    
     <item>
       <title>RTMP</title>
       <link>http://www.caiboyu.online/2022/6/16/Nginx/RTMP/</link>

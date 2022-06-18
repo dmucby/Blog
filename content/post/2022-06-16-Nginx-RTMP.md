@@ -3,7 +3,7 @@ title:       "RTMP"
 subtitle:    "RTMP推流简单介绍与部署"
 description: "将视频信息推流与图像传输部署在服务器上用于硬件服务"
 date:        2022-06-16
-author:      "Boyu Cai"
+author:      蔡博宇
 image:       "/img/programming/Nginx/post-bg-coffee.jpeg"
 published: true
 tags:

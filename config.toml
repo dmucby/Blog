@@ -14,11 +14,11 @@ hasCJKLanguage = true
 home = ["HTML", "RSS", "Algolia"]
 
 [params]
-  header_image = "img/home-bg-jeep.jpg"
+  header_image = "img/pexels-pixabay-462024.jpg"
   SEOTitle = "蔡博宇的博客 | Caiboyu Blog"
   description = "蔡博宇，程序员, 开源爱好者，生活探险家 | 这里是 蔡博宇 的博客，与你一起发现更大的世界。"
   keyword = "蔡博宇, caiboyu, Caiboyu, Caiboyu Blog, 博客, 个人网站, 互联网, Web, 云原生, PaaS, Istio, Kubernetes, 微服务, Microservice"
-  slogan = "路在脚下，心向远方"
+  slogan = "Stay Hungry Stay Foolish,Keep looking and don’t settle"
 
   image_404 = "img/404-bg.jpg"
   title_404 = "你来到了没有知识的荒原 :("
@@ -130,6 +130,9 @@ params = ["categories", "tags"]
   data-theme="light"
   data-lang="zh-CN"
   crossorigin="anonymous"
+
+[params.math]
+  params.math = true
 
 [markup]
   [markup.tableOfContents]

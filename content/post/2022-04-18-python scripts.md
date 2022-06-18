@@ -4,7 +4,7 @@ subtitle:   "Basic learning of python script"
 description: "Python 核心语法脚本"
 excerpt: ""
 date:       2022-04-18 15:00:00
-author:     "蔡博宇"
+author:     "Boyu Cai"
 image: "/img/programming/script/post-bg-unix-linux.jpg"
 published: true
 tags:
